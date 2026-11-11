@@ -30,3 +30,18 @@
 @media(max-width:1100px){.tech-icons .tech-tile{width:61px;height:56px}}
 @media(max-width:800px){.highlight-grid{grid-template-columns:1fr}.role-head{flex-direction:column;gap:7px}.cert-grid{grid-template-columns:1fr}}
 @media(max-width:500px){.tech-icons .tech-tile{width:49px;height:49px}.tech-icons .tech-tile svg{width:36px;height:36px}.tech-icons .tech-tile.aws-tile svg{width:43px;height:37px}.tech-icons .tech-tile.tux-tile span{font-size:27px}}
+
+/* Design reference: four individual luminous, floating technology tiles */
+.portrait-zone{isolation:isolate;padding-right:45px}
+.tech-icons{right:-6px;top:22px;gap:12px;perspective:800px;z-index:4}
+.tech-icons .tech-tile{width:89px;height:73px;border-radius:13px;background:linear-gradient(137deg,rgba(7,47,92,.94),rgba(9,25,60,.94) 55%,rgba(12,31,67,.98));border:1.5px solid rgba(40,179,255,.67);box-shadow:0 4px 17px rgba(0,138,245,.28),inset 0 0 20px rgba(37,142,250,.16),0 0 2px rgba(76,200,255,.85);transform:rotate(-5deg) skewY(-2deg);transition:transform .2s ease,box-shadow .2s ease}
+.tech-icons .tech-tile:nth-child(2){transform:translateX(10px) rotate(-5deg);border-color:#1b9feb}
+.tech-icons .tech-tile:nth-child(3){transform:translateX(10px) rotate(-4deg);border-color:#1391da}
+.tech-icons .tech-tile:nth-child(4){transform:translateX(8px) rotate(3deg);border-color:#7b51dd;box-shadow:0 4px 18px rgba(91,68,230,.25),inset 0 0 20px rgba(29,124,222,.16)}
+.tech-icons .tech-tile:hover{transform:translateX(-5px) scale(1.045) rotate(0deg);box-shadow:0 5px 26px rgba(14,157,255,.55)}
+.tech-icons .tech-tile svg{width:53px;height:53px}
+.tech-icons .tech-tile.aws-tile svg{width:67px;height:52px}
+.tech-icons .tech-tile.tux-tile svg{width:50px;height:57px}
+@media(max-width:1100px){.portrait-zone{padding-right:25px}.tech-icons{right:-7px}.tech-icons .tech-tile{width:73px;height:65px}.tech-icons .tech-tile svg{width:44px;height:44px}.tech-icons .tech-tile.aws-tile svg{width:59px;height:46px}.tech-icons .tech-tile.tux-tile svg{width:44px;height:51px}}
+@media(max-width:800px){.portrait-zone{padding-right:22px}.tech-icons{right:8%;top:16px}}
+@media(max-width:500px){.portrait-zone{padding-right:12px}.tech-icons{right:0;top:23px;gap:8px}.tech-icons .tech-tile{width:55px;height:53px;border-radius:9px}.tech-icons .tech-tile svg{width:36px;height:36px}.tech-icons .tech-tile.aws-tile svg{width:47px;height:39px}.tech-icons .tech-tile.tux-tile svg{width:35px;height:43px}}
