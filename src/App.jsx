@@ -1,4 +1,6 @@
 import React,{useState} from "react";
+import credlyBadges from "./credly-badges.json";
+
 import {Terminal,Github,Linkedin,Menu,X,Cloud,Server,ShieldCheck,Settings,Code2,Users,Layers,Download,ArrowRight,Award,BriefcaseBusiness,MonitorCog,ExternalLink,CheckCircle2,BookOpen} from "lucide-react";
 
 const skills=[
@@ -67,9 +69,13 @@ export default function App(){const [menu,setMenu]=useState(false);const [photoE
 <section className="later" id="blog"><div className="wrap"><div className="section-label">Engineering notes</div><h2>Technical Writing</h2><div className="later-card"><BookOpen className="feature-icon"/><p>Upcoming articles on cloud operations, virtualization, reliability and infrastructure troubleshooting. No posts have been published yet.</p></div></div></section>
 <section className="later" id="certifications"><div className="wrap">
 <div className="section-label">PROFESSIONAL CREDENTIALS</div>
-<div className="cert-heading"><div><h2>Certifications & Credentials</h2><p className="cert-summary">Cloud, virtualization, security, and infrastructure certifications from my engineering career.</p></div><a className="credly-profile-link" href="https://www.credly.com/users/fcocantu/badges/credly" target="_blank" rel="noopener noreferrer"><Award size={18}/> View badges on Credly <ExternalLink size={15}/></a></div>
-<div className="credential-gallery">{certs.map(c=><a key={c} className="credential-card" href="https://www.credly.com/users/fcocantu/badges/credly" target="_blank" rel="noopener noreferrer" aria-label={"Browse Credly profile for "+c}><div className="credential-art"><CredentialMark name={c}/></div><h3>{c}</h3></a>)}</div>
-<p className="cert-gallery-note">The issuer-themed illustrations are design placeholders, not official issued badges. Cards currently open the Credly badge collection; individual verification links and original badge artwork can be substituted when available.</p>
+<div className="credly-section-heading"><div><h2>Certifications & Credentials</h2><p>Cloud, virtualization, security and professional achievement badges.</p></div><a href="https://www.credly.com/users/fcocantu/badges/credly" target="_blank" rel="noopener noreferrer" className="credly-profile-link"><Award size={18}/> View badges on Credly <ExternalLink size={15}/></a></div>
+<div className="credly-card-grid">{credlyBadges.map((b,i)=>{
+ const issued=b.issued && !isNaN(Date.parse(b.issued))?new Date(b.issued+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):null;
+ const expires=b.expires && !isNaN(Date.parse(b.expires))?new Date(b.expires+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):null;
+ const isExpired=b.expires && new Date(b.expires+"T23:59:59")<new Date();
+ return <a className="credly-card" key={b.url+"-"+i} href={b.url} target="_blank" rel="noopener noreferrer" title={"View "+b.name+" on Credly"} aria-label={"Open "+b.name+" badge"}><div className="credly-card-picture">{b.image?<img src={b.image} alt={b.name+" issued badge"} loading="lazy" onError={e=>{e.currentTarget.style.display="none";e.currentTarget.nextElementSibling.style.display="flex";}}/>:null}<div className="credly-image-fallback" style={{display:b.image?"none":"flex"}}><CredentialMark name={b.name}/></div></div><h3>{b.name}</h3><p className="credly-issuer">{b.issuer}</p><div className="credly-card-bottom"><span className={isExpired?"credly-date expired":"credly-date"}>{expires?(isExpired?"Expired ":"Expires ")+expires:issued?"Issued "+issued:"View credential"}</span><ExternalLink size={14}/></div></a>;
+})}</div>
 </div></section>
 <section className="later" id="contact"><div className="wrap"><div className="section-label">Get in touch</div><h2>Let's Connect</h2><p>Interested in cloud infrastructure, hybrid systems or engineering collaboration? Find me on LinkedIn or GitHub.</p><div className="buttons"><a className="primary-btn" href="https://www.linkedin.com/in/frcantu/" target="_blank" rel="noreferrer"><Linkedin size={17} style={{display:"inline",marginRight:8}}/>LinkedIn <ExternalLink size={14} style={{display:"inline",marginLeft:5}}/></a><a className="outline-btn" href="https://github.com/fcocantu" target="_blank" rel="noreferrer"><Github size={17} style={{display:"inline",marginRight:8}}/>GitHub</a></div><p className="cert-note">Downloadable resume will be linked here after the updated PDF is approved.</p></div></section>
 </main><footer className="footer">© {new Date().getFullYear()} Francisco Cantu · Built with React · Deployed on Cloudflare</footer></div>}
