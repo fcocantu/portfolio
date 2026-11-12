@@ -114,3 +114,13 @@
 @media(max-width:1100px){.credly-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media(max-width:780px){.credly-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:480px){.credly-card-grid{grid-template-columns:repeat(1,minmax(0,1fr))!important}.credly-card{min-height:250px}}
+
+/* White issued-credential cards, as shown in the Credly reference screenshot */
+.credly-card{background:#ffffff!important;color:#162338!important;border:1px solid #cdd3dc!important;box-shadow:0 5px 18px rgba(0,0,0,.12)!important}
+.credly-card:hover,.credly-card:focus-visible{border-color:#43b5fc!important;box-shadow:0 14px 28px rgba(0,125,239,.23)!important}
+.credly-card h3{color:#192436!important}
+.credly-card .credly-issuer{color:#566277!important}
+.credly-card .credly-date{color:#465064!important}
+.credly-card .credly-date.expired{color:#c52525!important}
+.credly-card-picture{background:#ffffff}
+.credly-card-bottom svg{color:#1685c7}
