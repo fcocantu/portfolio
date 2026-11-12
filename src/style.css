@@ -115,12 +115,18 @@
 @media(max-width:780px){.credly-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:480px){.credly-card-grid{grid-template-columns:repeat(1,minmax(0,1fr))!important}.credly-card{min-height:250px}}
 
-/* White issued-credential cards, as shown in the Credly reference screenshot */
-.credly-card{background:#ffffff!important;color:#162338!important;border:1px solid #cdd3dc!important;box-shadow:0 5px 18px rgba(0,0,0,.12)!important}
-.credly-card:hover,.credly-card:focus-visible{border-color:#43b5fc!important;box-shadow:0 14px 28px rgba(0,125,239,.23)!important}
-.credly-card h3{color:#192436!important}
-.credly-card .credly-issuer{color:#566277!important}
-.credly-card .credly-date{color:#465064!important}
-.credly-card .credly-date.expired{color:#c52525!important}
-.credly-card-picture{background:#ffffff}
-.credly-card-bottom svg{color:#1685c7}
+
+/* Resume dark palette for Credly credentials and separate issuer sections. */
+.credential-group{margin-top:30px}
+.credential-group + .credential-group{margin-top:45px;padding-top:30px;border-top:1px solid #263d5f}
+.credential-group-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 17px;margin-bottom:20px}
+.credential-group-heading h3{font-size:21px;font-weight:750;color:#eff7ff;margin:0}
+.credential-group-heading span{font-size:13px;color:#8fb5d7}
+.credly-card,.credly-card:link,.credly-card:visited{background:linear-gradient(155deg,#142747,#0b172e 90%)!important;color:#eef7ff!important;border:1px solid #2a4a73!important;box-shadow:inset 0 1px rgba(172,222,255,.09),0 10px 25px rgba(0,0,0,.12)!important}
+.credly-card:hover,.credly-card:focus-visible{border-color:#4ac9ff!important;box-shadow:0 12px 26px rgba(0,129,242,.24),0 0 17px rgba(41,180,254,.14)!important}
+.credly-card h3{color:#f3f9ff!important}
+.credly-card .credly-issuer{color:#adc2db!important}
+.credly-card .credly-date{color:#c6d9ef!important}
+.credly-card .credly-date.expired{color:#ffa2a2!important}
+.credly-card-picture{background:transparent!important}
+.credly-card-bottom svg{color:#54cfff}
