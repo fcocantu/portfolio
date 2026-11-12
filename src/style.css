@@ -3,3 +3,151 @@
 @media(max-width:1100px){.nav-links{gap:15px}.portrait-frame{width:300px;height:285px}.tech-icons{right:-10px}.feature{padding:15px}.metric-grid{gap:10px}.wrap{width:min(1200px,calc(100% - 44px))}}
 @media(max-width:800px){.nav-links{display:none}.mobile-menu{display:block;background:transparent;border:0;color:white}.mobile-links{display:flex;flex-direction:column;gap:14px;background:#0a1428;padding:18px 25px}.hero-grid{grid-template-columns:1fr}.intro{padding:45px 0 10px}.portrait-zone{height:310px}.portrait-frame{height:270px;width:300px}.tech-icons{right:8%}.metric-grid{grid-template-columns:repeat(2,1fr)}.showcase{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:25px}.about-art{min-height:160px}}
 @media(max-width:500px){.wrap{width:calc(100% - 34px)}.intro h1{font-size:47px}.intro h2{font-size:23px}.portrait-frame{width:270px}.tech-icons{right:0}.tech-icons span{width:49px;height:49px;font-size:20px}.features{grid-template-columns:1fr}.metrics .metric{gap:8px}.metric small{font-size:11px}}
+/* Portfolio v2: real technology marks and resume content */
+.tech-icons{z-index:3}
+.tech-icons .tech-tile{display:flex;align-items:center;justify-content:center;width:70px;height:62px;background:linear-gradient(145deg,rgba(10,42,79,.97),rgba(10,21,49,.96));border:1px solid #176faf;border-radius:10px;box-shadow:0 0 16px #1779ca55,inset 0 0 15px #2074bf22;color:#60caff}
+.tech-icons .tech-tile svg{height:43px;width:48px;display:block}
+.tech-icons .tech-tile.aws-tile svg{width:58px;height:46px}
+.tech-icons .tech-tile.tux-tile span{font-size:37px;line-height:1;background:transparent;border:0;box-shadow:none;width:auto;height:auto}
+.highlights{background:linear-gradient(180deg,#0b1530,#080e20)}
+.highlight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.highlight-grid .later-card{margin-top:18px}
+.later-card h3{font-size:19px;font-weight:700;margin-bottom:9px;color:#f1f6ff}
+.feature-icon{color:#3fc1ff;margin-bottom:10px}
+.experience-list{display:grid;gap:16px;margin-top:24px}
+.experience-card{margin-top:0}
+.role-head{display:flex;align-items:start;justify-content:space-between;gap:20px}
+.role-head strong{font-size:14px;color:#4ec8ff}
+.role-head>span{color:#9fb0cd;font-size:13px;white-space:nowrap}
+.experience-card ul{list-style:disc;margin:17px 0 0 21px;color:#bfcae0;line-height:1.65}
+.experience-card li{padding-left:4px;margin-bottom:8px}
+.cert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.cert-item{display:flex;align-items:center;gap:12px;background:#0e192d;border:1px solid #293b5c;border-radius:10px;padding:14px;color:#dce7f5;font-size:14px}
+.cert-item svg{flex-shrink:0;color:#40bfff}
+.cert-note{font-size:13px!important;color:#93a4c0!important;margin-top:14px}
+.about-art-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
+.about-art-inner span{font-size:12px;color:#9dcbff;letter-spacing:2px}
+@media(max-width:1100px){.tech-icons .tech-tile{width:61px;height:56px}}
+@media(max-width:800px){.highlight-grid{grid-template-columns:1fr}.role-head{flex-direction:column;gap:7px}.cert-grid{grid-template-columns:1fr}}
+@media(max-width:500px){.tech-icons .tech-tile{width:49px;height:49px}.tech-icons .tech-tile svg{width:36px;height:36px}.tech-icons .tech-tile.aws-tile svg{width:43px;height:37px}.tech-icons .tech-tile.tux-tile span{font-size:27px}}
+
+/* Design reference: four individual luminous, floating technology tiles */
+.portrait-zone{isolation:isolate;padding-right:45px}
+.tech-icons{right:-6px;top:22px;gap:12px;perspective:800px;z-index:4}
+.tech-icons .tech-tile{width:89px;height:73px;border-radius:13px;background:linear-gradient(137deg,rgba(7,47,92,.94),rgba(9,25,60,.94) 55%,rgba(12,31,67,.98));border:1.5px solid rgba(40,179,255,.67);box-shadow:0 4px 17px rgba(0,138,245,.28),inset 0 0 20px rgba(37,142,250,.16),0 0 2px rgba(76,200,255,.85);transform:rotate(-5deg) skewY(-2deg);transition:transform .2s ease,box-shadow .2s ease}
+.tech-icons .tech-tile:nth-child(2){transform:translateX(10px) rotate(-5deg);border-color:#1b9feb}
+.tech-icons .tech-tile:nth-child(3){transform:translateX(10px) rotate(-4deg);border-color:#1391da}
+.tech-icons .tech-tile:nth-child(4){transform:translateX(8px) rotate(3deg);border-color:#7b51dd;box-shadow:0 4px 18px rgba(91,68,230,.25),inset 0 0 20px rgba(29,124,222,.16)}
+.tech-icons .tech-tile:hover{transform:translateX(-5px) scale(1.045) rotate(0deg);box-shadow:0 5px 26px rgba(14,157,255,.55)}
+.tech-icons .tech-tile svg{width:53px;height:53px}
+.tech-icons .tech-tile.aws-tile svg{width:67px;height:52px}
+.tech-icons .tech-tile.tux-tile svg{width:50px;height:57px}
+@media(max-width:1100px){.portrait-zone{padding-right:25px}.tech-icons{right:-7px}.tech-icons .tech-tile{width:73px;height:65px}.tech-icons .tech-tile svg{width:44px;height:44px}.tech-icons .tech-tile.aws-tile svg{width:59px;height:46px}.tech-icons .tech-tile.tux-tile svg{width:44px;height:51px}}
+@media(max-width:800px){.portrait-zone{padding-right:22px}.tech-icons{right:8%;top:16px}}
+@media(max-width:500px){.portrait-zone{padding-right:12px}.tech-icons{right:0;top:23px;gap:8px}.tech-icons .tech-tile{width:55px;height:53px;border-radius:9px}.tech-icons .tech-tile svg{width:36px;height:36px}.tech-icons .tech-tile.aws-tile svg{width:47px;height:39px}.tech-icons .tech-tile.tux-tile svg{width:35px;height:43px}}
+
+/* Aligned icon column with a pop-out hover effect */
+.tech-icons .tech-tile,
+.tech-icons .tech-tile:nth-child(2),
+.tech-icons .tech-tile:nth-child(3),
+.tech-icons .tech-tile:nth-child(4){
+  transform:translate3d(0,0,0) rotate(0deg) skew(0deg);
+  transform-origin:center;
+  transition:transform 260ms cubic-bezier(.2,.8,.2,1.25),box-shadow 260ms ease,border-color 260ms ease;
+  will-change:transform;
+}
+.tech-icons .tech-tile:hover,
+.tech-icons .tech-tile:nth-child(2):hover,
+.tech-icons .tech-tile:nth-child(3):hover,
+.tech-icons .tech-tile:nth-child(4):hover{
+  transform:translate3d(-17px,-4px,0) scale(1.16);
+  border-color:#67d8ff;
+  box-shadow:0 12px 30px rgba(0,145,255,.48),0 0 28px rgba(71,199,255,.4),inset 0 0 20px rgba(37,142,250,.18);
+  z-index:6;
+}
+@media (prefers-reduced-motion: reduce){
+  .tech-icons .tech-tile{transition:none}
+}
+
+/* Credly-linked credential cards — no unverifiable badge graphics */
+.cert-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.credly-profile-link{display:inline-flex;gap:9px;align-items:center;padding:11px 15px;border-radius:10px;background:#102e50;border:1px solid #2c8dca;color:#b6eaff;font-weight:600;font-size:14px}
+.credly-profile-link:hover{background:#17456b;box-shadow:0 0 15px rgba(42,156,249,.23)}
+.cert-badge-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.cert-badge-card{display:flex;flex-direction:column;align-items:flex-start;gap:10px;border:1px solid #2a3e64;border-radius:14px;padding:18px;background:linear-gradient(155deg,#152748,#0c162c 75%);min-height:228px;box-shadow:inset 0 1px 0 #ffffff09}
+.cert-badge-mark{width:68px;height:68px;display:flex;justify-content:center;align-items:center;border-radius:14px;background:radial-gradient(circle at 40% 25%,#1b5d9d,#102346);border:1px solid #267ab8;color:#70cbff}
+.cert-badge-info{flex:1}
+.cert-badge-info h3{font-size:15px;font-weight:700;line-height:1.4;color:#f1f7ff;margin:0 0 8px}
+.cert-badge-status{font-size:11px;color:#93abc7}
+.cert-badge-link{display:inline-flex;gap:6px;align-items:center;color:#53c8ff;font-size:12px;font-weight:600}
+.cert-badge-link:hover{text-decoration:underline;color:#b7ebff}
+@media(max-width:1100px){.cert-badge-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.cert-badge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.cert-badge-grid{grid-template-columns:1fr}.cert-badge-card{min-height:165px}}
+
+/* Simplified clickable certification badges */
+.cert-heading{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:25px}
+.cert-summary{color:#a7b8d3;font-size:14px;max-width:660px;line-height:1.65}
+.credential-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:18px}
+.credential-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px;min-height:228px;padding:22px 18px;border:1px solid #2b466e;border-radius:16px;background:linear-gradient(148deg,#16294a,#0b162c 88%);box-shadow:inset 0 1px rgba(150,210,255,.11),0 12px 30px #030a181f;color:#edf6ff;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.credential-card:hover,.credential-card:focus-visible{transform:translateY(-6px);border-color:#58c9ff;box-shadow:0 12px 30px rgba(14,126,226,.25),0 0 20px rgba(22,156,255,.14);outline-offset:3px}
+.credential-art{width:105px;height:105px;display:flex;align-items:center;justify-content:center}
+.credential-art svg{width:96px;height:96px;display:block;filter:drop-shadow(0 5px 11px rgba(0,0,0,.25))}
+.credential-card h3{font-size:15px;line-height:1.4;font-weight:700;max-width:210px;margin:0}
+.cert-gallery-note{color:#8da5c5;font-size:12px;line-height:1.6;margin-top:22px}
+@media(max-width:600px){.credential-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.credential-card{padding:16px 10px;min-height:190px}.credential-art{width:80px;height:80px}.credential-art svg{width:76px;height:76px}.credential-card h3{font-size:13px}}
+
+/* Credly gallery: reliable boxed card layout, modeled on the official gallery */
+.credly-section-heading{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:26px}
+.credly-section-heading p{color:#afc1dc;font-size:14px;line-height:1.65;margin:9px 0 0}
+.credly-card-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:17px!important;align-items:stretch}
+.credly-card{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0;min-width:0;min-height:294px;background:linear-gradient(150deg,#17294a,#0c172d 85%);border:1px solid #314b71;border-radius:16px;padding:20px 20px 17px;color:#edf6ff;text-decoration:none;box-shadow:inset 0 1px #ffffff10,0 12px 26px #02081920;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.credly-card:hover,.credly-card:focus-visible{transform:translateY(-5px);border-color:#54caff;box-shadow:0 15px 30px #072a5266;outline-offset:3px}
+.credly-card-picture{width:100%;height:124px;display:flex;justify-content:center;align-items:center;overflow:hidden;margin-bottom:13px}
+.credly-card-picture>img{width:114px;height:114px;object-fit:contain}
+.credly-image-fallback{width:112px;height:112px;align-items:center;justify-content:center}
+.credly-image-fallback svg{width:106px;height:106px}
+.credly-card h3{font-size:15px;line-height:1.4;font-weight:700;margin:0 0 7px;color:#f6f9ff}
+.credly-issuer{font-size:12px;line-height:1.45;color:#b2c5df;margin:0 0 18px}
+.credly-card-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;color:#56caff}
+.credly-date{font-size:12px;color:#c5d5e9}.credly-date.expired{color:#ff9f9f}
+@media(max-width:1100px){.credly-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:780px){.credly-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:480px){.credly-card-grid{grid-template-columns:repeat(1,minmax(0,1fr))!important}.credly-card{min-height:250px}}
+
+
+/* Resume dark palette for Credly credentials and separate issuer sections. */
+.credential-group{margin-top:30px}
+.credential-group + .credential-group{margin-top:45px;padding-top:30px;border-top:1px solid #263d5f}
+.credential-group-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 17px;margin-bottom:20px}
+.credential-group-heading h3{font-size:21px;font-weight:750;color:#eff7ff;margin:0}
+.credential-group-heading span{font-size:13px;color:#8fb5d7}
+.credly-card,.credly-card:link,.credly-card:visited{background:linear-gradient(155deg,#142747,#0b172e 90%)!important;color:#eef7ff!important;border:1px solid #2a4a73!important;box-shadow:inset 0 1px rgba(172,222,255,.09),0 10px 25px rgba(0,0,0,.12)!important}
+.credly-card:hover,.credly-card:focus-visible{border-color:#4ac9ff!important;box-shadow:0 12px 26px rgba(0,129,242,.24),0 0 17px rgba(41,180,254,.14)!important}
+.credly-card h3{color:#f3f9ff!important}
+.credly-card .credly-issuer{color:#adc2db!important}
+.credly-card .credly-date{color:#c6d9ef!important}
+.credly-card .credly-date.expired{color:#ffa2a2!important}
+.credly-card-picture{background:transparent!important}
+.credly-card-bottom svg{color:#54cfff}
+
+/* v3 design: isolated names prevent earlier light Credly styles from leaking */
+.credential-dark-card-v3{display:flex;flex-direction:column;min-width:0;background:#13243f!important;color:#f2f7ff!important;border:1px solid #345780!important;border-radius:16px;padding:20px;box-shadow:inset 0 1px #ffffff10,0 8px 25px #02081950;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.credential-dark-card-v3:hover,.credential-dark-card-v3:focus-visible{transform:translateY(-5px);border-color:#52d0ff!important;box-shadow:0 12px 28px #09539462}
+.credential-dark-card-v3 h3{color:#f5faff!important;font-size:15px;line-height:1.45;margin:0 0 7px}
+.credential-dark-issuer-v3{color:#adbfda!important;font-size:12px;line-height:1.45;margin:0 0 16px}
+.credential-dark-bottom-v3{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;color:#55caff}
+.credential-dark-date-v3{font-size:12px;color:#c4d5ed}
+.credential-dark-date-v3.expired{color:#ff9d9d!important}
+.credential-dark-image-v3{width:100%;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:transparent!important}
+.credential-dark-image-v3>img{height:114px;width:114px;object-fit:contain}
+.v3-group-heading h3{color:#f2f7ff!important}
+
+/* v4: strict bounds for issuer badge imagery so it never covers other content */
+.credential-dark-card-v3{overflow:hidden;min-height:290px}
+.credential-dark-image-v3{display:flex!important;flex:0 0 120px!important;width:100%!important;height:120px!important;max-height:120px!important;overflow:hidden!important;align-items:center!important;justify-content:center!important;position:relative}
+.credential-dark-image-v3>img{display:block;width:112px!important;height:112px!important;max-width:112px!important;max-height:112px!important;object-fit:contain!important;flex-shrink:0}
+.credential-dark-image-v3 .credly-image-fallback{width:112px!important;height:112px!important;max-width:112px!important;max-height:112px!important;align-items:center;justify-content:center;overflow:hidden}
+.credential-dark-image-v3 .credly-image-fallback svg{width:104px!important;height:104px!important;max-width:104px!important;max-height:104px!important}
+.credential-group-heading{position:relative;z-index:1}
+.credential-dark-card-v3 h3,.credential-dark-issuer-v3{position:relative;z-index:1}
