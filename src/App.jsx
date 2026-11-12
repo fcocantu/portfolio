@@ -66,7 +66,7 @@ export default function App(){const [menu,setMenu]=useState(false);const [photoE
 {certs.map((c,i)=><article key={c} style={{display:"flex",flexDirection:"column",minHeight:218,padding:22,borderRadius:16,border:"1px solid #28446d",background:"linear-gradient(145deg,#152849,#0a152b 82%)",boxShadow:"inset 0 1px rgba(150,210,255,.1),0 12px 30px #030a181f"}}>
 <div style={{width:72,height:72,display:"flex",justifyContent:"center",alignItems:"center",borderRadius:16,background:"radial-gradient(circle at 40% 22%,#225d9c,#101d3d)",border:"1px solid #367bb0",color:"#72d3ff",marginBottom:18}}><Award size={39} strokeWidth={1.5}/></div>
 <h3 style={{fontSize:16,lineHeight:1.45,fontWeight:700,color:"#f0f6ff",margin:"0 0 10px"}}>{c}</h3>
-<div style={{marginTop:"auto",paddingTop:14,display:"flex",justifyContent:"space-between",alignItems:"center",gap:6}}><span style={{color:"#9eb0cc",fontSize:12}}>Listed on résumé</span><ExternalLink size={14} color="#5dccff"/></div>
+<div style={{marginTop:"auto",paddingTop:14,display:"flex",justifyContent:"space-between",alignItems:"center",gap:6}}><span style={{color:"#9eb0cc",fontSize:12}}>Listed on résumé</span><a href="https://www.credly.com/users/fcocantu/badges/credly" target="_blank" rel="noopener noreferrer" aria-label={"Browse Credly profile for "+c} style={{color:"#66d4ff",fontSize:12,display:"inline-flex",alignItems:"center",gap:4}}>Credly profile <ExternalLink size={13}/></a></div>
 </article>)}
 </div>
 <p style={{color:"#98aac6",fontSize:12,marginTop:22,lineHeight:1.6}}>Credential names are based on my résumé. For digital badge verification, visit my Credly profile. Individual badge URLs will be added when verified.</p>
